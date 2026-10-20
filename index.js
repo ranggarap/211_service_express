@@ -19,3 +19,10 @@ const pool = new Pool({
     password: '123',
     port: 5432,
 })
+
+// GET ALL
+app.get('/',(req, res) =>{
+console.log("TEST DATA :");
+
+pool.query('SELECT * FROM biodata ORDER BY id')
+        
